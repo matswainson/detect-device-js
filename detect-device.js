@@ -22,6 +22,14 @@
 		userAgent = 'Google TV';
 	} else if (userAgent.indexOf('AppleTV') > -1) {
 		userAgent = 'Apple TV';
+	} else if (userAgent.indexOf('Android') > -1) {
+		userAgent = 'Android';
+	} else if (userAgent.indexOf('BlackBerry') > -1) {
+		userAgent = 'BlackBerry';
+	} else if (userAgent.indexOf('Opera Mini') > -1) {
+		userAgent = 'Opera Mini';
+	} else if (/iphone|ipod|ipad/.test(userAgent.toLowerCase())) {
+		userAgent = 'iOS';
 	} else {
 		userAgent = 'Unknown';
 	}
