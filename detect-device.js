@@ -1,6 +1,11 @@
 ;(function(window, undefined){
 
 	var userAgent = window.navigator ? (window.navigator.userAgent ? window.navigator.userAgent : null) : null;
+
+	if (!userAgent) {
+		return;
+	}
+
 	if (userAgent.indexOf('Xbox') > -1) {
 		userAgent = 'Xbox';
 	} else if (userAgent.indexOf('Playstation') > -1) {
