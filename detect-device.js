@@ -7,7 +7,7 @@
 	}
 
 	if (userAgent.indexOf('Xbox') > -1 && userAgent.indexOf('Xbox One') > -1) {
-		userAgent = 'Xbox';
+		userAgent = 'Xbox One';
 	} else if (userAgent.indexOf('Xbox') > -1) {
 		userAgent = 'Xbox 360';
 	} else if (userAgent.indexOf('Playstation 4') > -1) {
