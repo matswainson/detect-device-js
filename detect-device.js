@@ -1,67 +1,86 @@
 ;(function(window, undefined){
 
-	var userAgent = window ? window.navigator ? (window.navigator.userAgent ? window.navigator.userAgent : null) : null : null;
+	var device = {},
+		userAgent = window ? window.navigator ? (window.navigator.userAgent ? window.navigator.userAgent : null) : null : null;
 
 	if (!userAgent) {
 		return;
 	}
 
 	if (userAgent.indexOf('Xbox') > -1 && userAgent.indexOf('Xbox One') > -1) {
-		userAgent = 'Xbox One';
+		device.type = 'console';
+		device.userAgent = 'Xbox One';
 	} else if (userAgent.indexOf('Xbox') > -1) {
-		userAgent = 'Xbox 360';
+		device.type = 'console';
+		device.userAgent = 'Xbox 360';
 	} else if (userAgent.indexOf('Playstation 4') > -1) {
-		userAgent = 'PlayStation 4';
+		device.type = 'console';
+		device.userAgent = 'PlayStation 4';
 	} else if (userAgent.indexOf('Playstation 3') > -1) {
-		userAgent = 'PlayStation 3';
+		device.type = 'console';
+		device.userAgent = 'PlayStation 3';
 	} else if (userAgent.indexOf('Nintendo WiiU') > -1 ||
 			   userAgent.indexOf('NintendoBrowser') > -1) {
-		userAgent = 'Nintendo';
+		device.type = 'console';
+		device.userAgent = 'Nintendo';
 	} else if (userAgent.indexOf('SMART-TV') > -1 ||
 			   userAgent.indexOf('SmartTV') > -1 ||
 			   userAgent.indexOf('Opera TV Store') > -1 ||
 			   userAgent.indexOf('Panasonic') > -1 ||
 			   userAgent.indexOf('Philips') > -1) {
-		userAgent = 'Smart TV';
+		device.type = 'tv';
+		device.userAgent = 'Smart TV';
 	} else if (userAgent.indexOf('GoogleTV') > -1) {
-		userAgent = 'Google TV';
+		device.type = 'tv';
+		device.userAgent = 'Google TV';
 	} else if (userAgent.indexOf('AppleTV') > -1) {
-		userAgent = 'Apple TV';
+		device.type = 'tv';
+		device.userAgent = 'Apple TV';
 	} else if (userAgent.indexOf('Android') > -1 && userAgent.indexOf('SM-G900P') > -1) {
-		userAgent = 'Galaxy S5';
+		device.type = 'smartphone';
+		device.userAgent = 'Galaxy S5';
 	} else if (userAgent.indexOf('Android') > -1 && userAgent.indexOf('Nexus 5') > -1) {
-		userAgent = 'Nexus 5';
+		device.type = 'smartphone';
+		device.userAgent = 'Nexus 5';
 	} else if (userAgent.indexOf('Android') > -1 && userAgent.indexOf('Nexus 6') > -1) {
-		userAgent = 'Nexus 6';
+		device.type = 'smartphone';
+		device.userAgent = 'Nexus 6';
 	} else if (userAgent.indexOf('Android') > -1 && userAgent.indexOf('Nexus 7') > -1) {
-		userAgent = 'Nexus 7';
+		device.type = 'tablet';
+		device.userAgent = 'Nexus 7';
 	} else if (userAgent.indexOf('Android') > -1 && userAgent.indexOf('Nexus 10') > -1) {
-		userAgent = 'Nexus 10';
+		device.type = 'tablet';
+		device.userAgent = 'Nexus 10';
 	} else if (userAgent.indexOf('Android') > -1) {
-		userAgent = 'Android';
+		device.userAgent = 'Android';
 	} else if (userAgent.indexOf('BlackBerry') > -1) {
-		userAgent = 'BlackBerry';
+		device.userAgent = 'BlackBerry';
 	} else if (userAgent.indexOf('KFAPWI') > -1 || userAgent.indexOf('Kindle Fire') > -1) {
-		userAgent = 'Kindle Fire';
+		device.type = 'tablet';
+		device.userAgent = 'Kindle Fire';
 	} else if (userAgent.indexOf('NOKIA') > -1 || userAgent.indexOf('NokiaBrowser') > -1) {
-		userAgent = 'Nokia';
+		device.userAgent = 'Nokia';
 	} else if (userAgent.indexOf('Windows Phone') > -1) {
-		userAgent = 'Windows Phone';
+		device.type = 'smartphone';
+		device.userAgent = 'Windows Phone';
 	} else if (userAgent.indexOf('MSIE') > -1) {
-		userAgent = 'Internet Explorer';
+		device.userAgent = 'Internet Explorer';
 	} else if (userAgent.indexOf('Opera Mini') > -1) {
-		userAgent = 'Opera Mini';
+		device.userAgent = 'Opera Mini';
 	} else if (userAgent.indexOf('iPhone') > -1) {
-		userAgent = 'iPhone';
+		device.type = 'smartphone';
+		device.userAgent = 'iPhone';
 	} else if (userAgent.indexOf('iPod') > -1) {
-		userAgent = 'iPod';
+		device.type = 'portable media player';
+		device.userAgent = 'iPod';
 	} else if (userAgent.indexOf('iPad') > -1) {
-		userAgent = 'iPad';
+		device.type = 'tablet';
+		device.userAgent = 'iPad';
 	} else {
-		userAgent = 'Unknown';
+		device.userAgent = 'Unknown';
 	}
 	
-	console.log('device:', userAgent);
-	window.device = userAgent;
+	console.log('device:', device);
+	window.device = device;
 
 })(window);
