@@ -20,7 +20,8 @@
 	} else if (userAgent.indexOf('SMART-TV') > -1 ||
 			   userAgent.indexOf('SmartTV') > -1 ||
 			   userAgent.indexOf('Opera TV Store') > -1 ||
-			   userAgent.indexOf('PhilipsTV') > -1) {
+			   userAgent.indexOf('Panasonic') > -1 ||
+			   userAgent.indexOf('Philips') > -1) {
 		userAgent = 'Smart TV';
 	} else if (userAgent.indexOf('GoogleTV') > -1) {
 		userAgent = 'Google TV';
@@ -40,7 +41,7 @@
 		userAgent = 'Android';
 	} else if (userAgent.indexOf('BlackBerry') > -1) {
 		userAgent = 'BlackBerry';
-	} else if (userAgent.indexOf('KFAPWI') > -1) {
+	} else if (userAgent.indexOf('KFAPWI') > -1 || userAgent.indexOf('Kindle Fire') > -1) {
 		userAgent = 'Kindle Fire';
 	} else if (userAgent.indexOf('NOKIA') > -1 || userAgent.indexOf('NokiaBrowser') > -1) {
 		userAgent = 'Nokia';
