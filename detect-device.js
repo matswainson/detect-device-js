@@ -25,9 +25,13 @@
 		device.userAgent = 'Nintendo';
 	} else if (userAgent.indexOf('SMART-TV') > -1 ||
 			   userAgent.indexOf('SmartTV') > -1 ||
+			   userAgent.indexOf('HbbTV') > -1 ||
+			   userAgent.indexOf('LG NetCast') > -1 ||
 			   userAgent.indexOf('Opera TV Store') > -1 ||
 			   userAgent.indexOf('Panasonic') > -1 ||
-			   userAgent.indexOf('Philips') > -1) {
+			   userAgent.indexOf('Philips') > -1 ||
+			   userAgent.indexOf('Roku') > -1 ||
+			   userAgent.indexOf('SonyDTV') > -1) {
 		device.type = 'tv';
 		device.userAgent = 'Smart TV';
 	} else if (userAgent.indexOf('GoogleTV') > -1) {
