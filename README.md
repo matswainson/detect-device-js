@@ -18,7 +18,9 @@ JavaScript parser of User Agent strings to detect unique interactive devices
 * Internet Explorer
 * Opera Mini
 * Nokia
-* Nintendo
+* Nintendo 3DS
+* Nintendo Switch
+* Nintendo WiiU
 * Playstation 3
 * Playstation 4
 * Samsung Galaxy S5
