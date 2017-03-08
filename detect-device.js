@@ -19,10 +19,17 @@
 	} else if (userAgent.indexOf('Playstation 3') > -1) {
 		device.type = 'console';
 		device.userAgent = 'PlayStation 3';
-	} else if (userAgent.indexOf('Nintendo WiiU') > -1 ||
-			   userAgent.indexOf('NintendoBrowser') > -1) {
+	} else if (userAgent.indexOf('Nintendo') > -1) {
 		device.type = 'console';
-		device.userAgent = 'Nintendo';
+		if (userAgent.indexOf('3DS') > -1) {
+			device.userAgent = 'Nintendo 3DS';
+		} else if (userAgent.indexOf('Switch') > -1) {
+			device.userAgent = 'Nintendo Switch';
+		} else if (userAgent.indexOf('WiiU') > -1) {
+			device.userAgent = 'Nintendo WiiU';
+		} else {
+			device.userAgent = 'Nintendo';
+		}
 	} else if (userAgent.indexOf('SMART-TV') > -1 ||
 			   userAgent.indexOf('SmartTV') > -1 ||
 			   userAgent.indexOf('HbbTV') > -1 ||
