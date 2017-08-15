@@ -4,7 +4,7 @@
 
 JavaScript parser of User Agent strings to detect unique interactive devices
 
-###Supported devices:
+### Supported devices:
 
 * Android
 * Apple iPad
