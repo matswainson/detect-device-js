@@ -1,7 +1,7 @@
-;(function(window, undefined){
+module.exports = function (){
 
 	var device = {},
-		userAgent = window ? window.navigator ? (window.navigator.userAgent ? window.navigator.userAgent : null) : null : null;
+		  userAgent = window && window.navigator && window.navigator.userAgent;
 
 	if (!userAgent) {
 		return;
@@ -91,7 +91,6 @@
 		device.userAgent = 'Unknown';
 	}
 	
-	console.log('device:', device);
-	window.device = device;
+	return device;
 
-})(window);
+};

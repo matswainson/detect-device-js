@@ -1,0 +1,26 @@
+{
+  "name": "detect-device",
+  "version": "1.0.0",
+  "description": "JavaScript parser of User Agent strings to detect unique interactive devices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matswainson/detect-device-js.git"
+  },
+  "keywords": [
+    "detect",
+    "device",
+    "user",
+    "agent",
+    "parser"
+  ],
+  "author": "Mat Swainson <mat@matswainson.com> (http://matswainson.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matswainson/detect-device-js/issues"
+  },
+  "homepage": "https://github.com/matswainson/detect-device-js#readme"
+}
