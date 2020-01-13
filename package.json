@@ -1,5 +1,5 @@
 {
-  "name": "detect-device",
+  "name": "detect-device-js",
   "version": "1.0.0",
   "description": "JavaScript parser of User Agent strings to detect unique interactive devices",
   "main": "index.js",
