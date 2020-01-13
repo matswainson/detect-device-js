@@ -4,7 +4,7 @@ module.exports = function (){
       type: 'Unknown',
       userAgent: 'Unknown'
     },
-		userAgent = window && window.navigator && window.navigator.userAgent;
+		userAgent = typeof window === 'object' ? window && window.navigator && window.navigator.userAgent : null;
 
 	if (!userAgent) {
 		return device;
