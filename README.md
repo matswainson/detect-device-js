@@ -4,6 +4,20 @@
 
 JavaScript parser of User Agent strings to detect unique interactive devices
 
+### Example
+
+```js
+var device = require('device-detect-js');
+
+/* {
+  type: 'Console',
+  userAgent: 'Xbox One'
+} */
+
+console.log(device.type); // Console
+console.log(device.userAgent); // Xbox One
+```
+
 ### Supported devices:
 
 * Android
