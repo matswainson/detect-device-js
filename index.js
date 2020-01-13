@@ -1,10 +1,13 @@
 module.exports = function (){
 
-	var device = {},
-		  userAgent = window && window.navigator && window.navigator.userAgent;
+	var device = {
+      type: 'Unknown',
+      userAgent: 'Unknown'
+    },
+		userAgent = window && window.navigator && window.navigator.userAgent;
 
 	if (!userAgent) {
-		return;
+		return device;
 	}
 
 	if (userAgent.indexOf('Xbox') > -1 && userAgent.indexOf('Xbox One') > -1) {
@@ -87,10 +90,8 @@ module.exports = function (){
 	} else if (userAgent.indexOf('iPad') > -1) {
 		device.type = 'tablet';
 		device.userAgent = 'iPad';
-	} else {
-		device.userAgent = 'Unknown';
 	}
 	
 	return device;
 
-};
+}();
