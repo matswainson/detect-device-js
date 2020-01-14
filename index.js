@@ -90,7 +90,13 @@ module.exports = function (){
 	} else if (userAgent.indexOf('iPad') > -1) {
 		device.type = 'tablet';
 		device.userAgent = 'iPad';
-	}
+  } else if (userAgent.indexOf('Chrome') > -1) {
+    device.userAgent = 'Chrome';
+  } else if (userAgent.indexOf('Firefox') > 0) {
+    device.userAgent = 'Firefox';
+  } else if (userAgent.indexOf('Safari') > 0) {
+    device.userAgent = 'Safari';
+  }
 	
 	return device;
 
