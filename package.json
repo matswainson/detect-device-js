@@ -1,6 +1,6 @@
 {
   "name": "detect-device-js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "JavaScript parser of User Agent strings to detect unique interactive devices",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/matswainson/detect-device-js#readme",
   "devDependencies": {
-    "mocha": "^7.0.0"
+    "mocha": "^7.1.2"
   }
 }
